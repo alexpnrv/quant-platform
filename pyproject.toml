@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-platform"
+version = "0.1.0"
+description = "Production-grade quantitative trading and risk analysis platform"
+authors = [{ name = "Your Name" }]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.0",
+    "black>=24.0",
+    "ruff>=0.2",
+    "mypy>=1.8",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"

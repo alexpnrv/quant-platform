@@ -1,0 +1,3 @@
+"""
+Quant platform core package.
+"""
